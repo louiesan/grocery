@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" class="smm:scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eGrocery Store</title>
+    <!-- style SHEET -->
+    <link rel="stylesheet" href="/Grocery/Css/styles.css">
+    <!-- ICON-LOGO SHEET -->
+    <link rel="shortcut icon" href="/images/fav-icon.png">
+    <!-- FONT SHEET -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- ICONS SHEET -->
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<!-- <style>
+    #Menu:checked~ul {
+        display: inline;
+    }
+</style> -->
+
+<body class=" min-h-screen bg-white selection:bg-green-400 selection:text-white">
+    <!--THE HEADER  -->
+    <header class="my-2 md:my-5 mx-2">
+        <section
+            class="max-w-5xl xl:max-w-6xl p-5 mx-auto flex flex-row justify-between gap-2 mg:justify-evenly items-center">
+            <a href="">
+                <h1 class="text-xl sm:text-2xl md:text-3xl font-nun font-bold"><span
+                        class="text-green-600">e</span>Grocery</h1>
+            </a>
+            <input type="checkbox" id="Menu" class="none peer">
+            <label for="Menu"
+                class="block cursor-pointer text-3xl leading-4 md:hidden peer-checked:animate-spin peer-checked:hidden ease-out">
+                &#9776;
+            </label>
+            <label for="Menu"
+                class="hidden cursor-pointer text-3xl leading-4 peer-checked:block animate-pulse ease-in-out">&#x2715;</label>
+
+            <ul
+                class="md:flex md:w-auto md:relative md:top-auto md:left-auto flex-row justify-between w-full absolute left-0 top-[100px] none peer-checked:block bg-white z-50">
+                <li
+                    class="md:p-0 md:py-0 md:border-0 md:px-5 md:font-medium p-3 py-8 border-gray-300 text-left font-nun font-semibold">
+                    <a class="text-green-600 ease-in-out transition-all duration-500 animate-pulse md:animate-none"
+                        href="index.html">Home</a>
+                </li>
+                <li
+                    class="md:p-0 md:py-0 md:border-0 md:px-5 md:font-medium p-3 py-8 border-gray-300 text-left font-nun font-semibold">
+                    <a class="hover:text-green-600 ease-in-out transition-all duration-500"
+                        href="#categories">Categories</a>
+                </li>
+                <li
+                    class="md:p-0 md:py-0 md:border-0 md:px-5 md:font-medium p-3 py-8 border-gray-300 text-left font-nun font-semibold">
+                    <a class="hover:text-green-600 ease-in-out transition-all duration-500" href="#package">Our
+                        Pockages</a>
+                </li>
+                <li
+                    class="md:p-0 md:py-0 md:border-0 md:px-5 md:font-medium p-3 py-8 border-gray-300 text-left font-nun font-semibold">
+                    <a class="hover:text-green-600 ease-in-out transition-all duration-500" href="#app">Our App</a>
+                </li>
+            </ul>
+            <ul class="flex flex-row gap-3">
+                <li class="relative cursor-pointer border-0 rounded-full bg-[#93ffbea1] p-2 px-3"><i
+                        class="fa-regular fa-heart text-green-600"></i>
+                    <span
+                        class="absolute -top-[10px] -right-[10px] border rounded-full bg-green-600 px-2 text-white">0</span>
+                </li>
+                <li class="relative cursor-pointer border-0 rounded-full bg-[#93ffbea1] p-2 px-3"><i
+                        class="fa-solid fa-cart-shopping text-green-600"></i></i>
+                    <span
+                        class="absolute -top-[10px] -right-[10px] border rounded-full bg-green-600 px-2 text-white">0</span>
+                </li>
+            </ul>
+
+        </section>
+    </header>
+    <!-- THE SEARCHBAR -->
+    <article class="my-2 mx-5 scroll-mt-10" id="Home">
+        <section
+            class="max-w-xs sm:max-w-xl  md:max-w-2xl  mg:max-w-4xl lg:max-w-5xl mx-auto my-12 mg:min md:min-h-[400px] sm:min-h-[250px] min-h-[200px] bg-gradient-to-t from-[#c7fbc9] to-[#eee] rounded-[24px] relative overflow-hidden flex justify-self-end items-center p-5 ">
+            <img src="/images/bg-1.png" alt=""
+                class="absolute w-[80px] -top-10 sm:w-40 sm:-top-14 sm:-left-12 md:w-40 md:-top-16 md:-left-6 mg:w-52 lg:-top-20 -left-8 -z-0">
+            <img src="/images/bg-2.png" alt=""
+                class="absolute w-[60px] -top-6 sm:w-20 sm:-top-12 md:w-24 mg:w-32 mg:-top-14 left-[50%] -z-0">
+            <img src="/images/bg.png" alt=""
+                class="absolute w-[300px] sm:w-[450px] md:w-[600px] mg:w-[800px] bottom-0 right-0 -z-0">
+
+            <div class="relative z-10 flex flex-col md:pl-10">
+                <h1
+                    class="text-[#0e0e0e] text-xl sm:text-2xl md:text-3xl mg:text-4xl md:whitespace-pre-line font-nun font-[700] py-1">
+                    Order Your Daily
+                    Groceries</h1>
+                <p class="text-xs sm:text-xl md:text-2xl text-green-600 font-nun font-bold">#Free Delivery</p>
+                <div class="py-3 relative">
+                    <i class="fa-solid fa-magnifying-glass absolute top-[40%] left-2" style="color: #0a0a0a;"></i>
+                    <input type="search"
+                        class="rounded-xl placeholder:text-xs placeholder:text-gray-500 focus:placeholder:text-green-400 outline-none placeholder:p-3 md:placeholder:font-semibold md:placeholder:font-nun pl-6 h-7 w-64 sm:w-96 sm:h-8 sm:rounded-2xl md:h-10 mg:w-[600px] mg:h-12 mg:rounded-3xl"
+                        placeholder="Search your daily groceries">
+                    <button
+                        class="absolute top-[25%] right-0 border bg-green-600 text-white font-nun text-xs p-1 px-4 sm:h-8 sm:top-[22%] md:h-9 md:top-[21%] md:w-32 mg:w-36 mg:h-11 mg:top-[20%] rounded-[24px] hover:opacity-[0.5] ease-in-out transition-all duration-300">Search</button>
+                </div>
+            </div>
+
+
+        </section>
+    </article>
+    <!-- THE CATEGORY -->
+    <article class="my-5 mx-5 scroll-mt-10 " id="categories">
+        <section class="max-w-xs sm:max-w-xl  md:max-w-2xl  mg:max-w-4xl lg:max-w-5xl mx-auto">
+            <div class="flex flex-row justify-between">
+                <h1 class="text-xl sm:text-2xl md:text-3xl font-nun font-bold text-[#0c0c0c]">Category</h1>
+                <p class="text-xs mg:text-xl font-nun text-[#8e8e8e]">All</p>
+            </div>
+            <div
+                class="max-w-xs sm:max-w-xl  md:max-w-2xl  mg:max-w-4xl lg:max-w-5xl mx-auto my-10 grid grid-cols-[repeat(auto-fill,120px)] justify-evenly gap-3">
+                <div
+                    class="w-[120px] h-[120px] bg-[#f6f6f6] border rounded-md flex flex-col gap-4 justify-center items-center cursor-pointer group">
+                    <img src="/images/fish.png" alt="" class="w-12 group-hover:w-14 duration-300 ease-in-out">
+                    <h1 class="font-nun font-bold text-xs text-gray-600">Fish & Meat</h1>
+                </div>
+                <div
+                    class="w-[120px] h-[120px] bg-[#f6f6f6] border rounded-md flex flex-col gap-4 justify-center items-center cursor-pointer group">
+                    <img src="/images/Vegetables.png" alt="" class="w-10 group-hover:w-12 duration-300 ease-in-out">
+                    <h1 class="font-nun font-bold text-xs text-gray-600">Vegetables</h1>
+                </div>
+                <div
+                    class="w-[120px] h-[120px] bg-[#f6f6f6] border rounded-md flex flex-col gap-4 justify-center items-center cursor-pointer group">
+                    <img src="/images/medicine.png" alt="" class="w-10 group-hover:w-12 duration-300 ease-in-out">
+                    <h1 class="font-nun font-bold text-xs text-gray-600">Medicine</h1>
+                </div>
+                <div
+                    class="w-[120px] h-[120px] bg-[#f6f6f6] border rounded-md flex flex-col gap-4 justify-center items-center cursor-pointer group">
+                    <img src="/images/baby.png" alt="" class="w-6 group-hover:w-8 duration-300 ease-in-out">
+                    <h1 class="font-nun font-bold text-xs text-gray-600">Baby</h1>
+                </div>
+                <div
+                    class="w-[120px] h-[120px] bg-[#f6f6f6] border rounded-md flex flex-col gap-4 justify-center items-center cursor-pointer group">
+                    <img src="/images/office.png" alt="" class="w-8 group-hover:w-10 duration-300 ease-in-out">
+                    <h1 class="font-nun font-bold text-xs text-gray-600">Office</h1>
+                </div>
+                <div
+                    class="w-[120px] h-[120px] bg-[#f6f6f6] border rounded-md flex flex-col gap-4 justify-center items-center cursor-pointer group">
+                    <img src="/images/Gardening.png" alt="" class="w-12 group-hover:w-14 duration-300 ease-in-out">
+                    <h1 class="font-nun font-bold text-xs text-gray-600">Gardening</h1>
+                </div>
+                <div
+                    class="w-[120px] h-[120px] bg-[#f6f6f6] border rounded-md flex flex-col gap-4 justify-center items-center cursor-pointer group">
+                    <img src="/images/beauty.png" alt="" class="w-12 group-hover:w-14 duration-300 ease-in-out">
+                    <h1 class="font-nun font-bold text-xs text-gray-600">Beauty</h1>
+                </div>
+            </div>
+        </section>
+    </article>
+    <!-- THE PRODUCTS -->
+    <article class="my-0 sm:my-5 mb-[100px] mx-0 sm:mx-5 scroll-mt-10">
+        <section class="max-w-xs sm:max-w-xl  md:max-w-2xl  mg:max-w-4xl lg:max-w-5xl mx-auto ">
+            <div class="flex flex-row justify-between">
+                <h1 class="text-xl sm:text-2xl md:text-3xl font-nun font-bold text-[#0c0c0c]">Popular Product</h1>
+                <p class="text-xs mg:text-xl font-nun text-[#8e8e8e]">All</p>
+            </div>
+            <!-- sl3a -->
+            <div
+                class="max-w-xs sm:max-w-xl  md:max-w-2xl  mg:max-w-4xl lg:max-w-5xl mx-auto flex flex-col md:flex-row flex-wrap justify-center items-center">
+                <!-- Apple -->
+                <div
+                    class="my-4 mx-1 flex flex-col border-[1px] border-green-200 rounded-2xl p-5 w-72 smm:w-80 justify-evenly items-center relative">
+                    <img src="/images/apple.png" alt="" class="w-[210px]">
+                    <i class="fa-regular fa-heart text-xl absolute top-4 right-4 cursor-pointer"
+                        style="color: #949494;"></i>
+                    <h1 class="text-2xl font-nun font-bold text-[#0c0c0c] self-start mt-2">Apple</h1>
+                    <p class="text-sm font-nun font-semibold text-[#8e8e8e] self-start">1 KG</p>
+                    <h1 class="text-2xl font-semibold font-nun text-[#0c0c0c] self-start mt-3">2$
+                    </h1>
+                    <button
+                        class="my-5 bg-green-100 text-[#609d60] font-semibold w-64 h-9 hover:bg-[#609d60] hover:text-green-100 group duration-300 ease-in-out"><i
+                            class="fa-solid fa-bag-shopping mx-3 group-hover:text-green-100 text-[#609d60] duration-300 ease-in-out"></i>Add
+                        To
+                        Cart</button>
+                </div>
+                <!-- Chili -->
+                <div class="my-4 mx-1 flex flex-col border-[1px] border-green-200 rounded-2xl p-5             
+ justify-evenly items-center relative">
+                    <img src="/images/chili.png" alt="" class="w-[260px]">
+                    <i class="fa-regular fa-heart text-xl absolute top-4 right-4 cursor-pointer"
+                        style="color: #949494;"></i>
+                    <h1 class="text-2xl font-nun font-bold text-[#0c0c0c] self-start mt-2">Chili</h1>
+                    <p class="text-sm font-nun font-semibold text-[#8e8e8e] self-start">1 KG</p>
+                    <h1 class="text-2xl font-semibold font-nun text-[#0c0c0c] self-start mt-3">3$
+                    </h1>
+                    <button
+                        class="my-5 bg-green-100 text-[#609d60] font-semibold w-64 h-9 hover:bg-[#609d60] hover:text-green-100 group duration-300 ease-in-out"><i
+                            class="fa-solid fa-bag-shopping mx-3 group-hover:text-green-100 text-[#609d60] duration-300 ease-in-out"></i>Add
+                        To
+                        Cart</button>
+                </div>
+                <!-- Onion -->
+                <div class="my-4 mx-1 flex flex-col border-[1px] border-green-200 rounded-2xl p-5             
+ justify-evenly items-center relative">
+                    <img src="/images/onion.png" alt="" class="w-[220px]">
+                    <i class="fa-regular fa-heart text-xl absolute top-4 right-4 cursor-pointer"
+                        style="color: #949494;"></i>
+                    <h1 class="text-2xl font-nun font-bold text-[#0c0c0c] self-start mt-2">Onion</h1>
+                    <p class="text-sm font-nun font-semibold text-[#8e8e8e] self-start">1 KG</p>
+                    <h1 class="text-2xl font-semibold font-nun text-[#0c0c0c] self-start mt-3">1$
+                    </h1>
+                    <button
+                        class="my-5 bg-green-100 text-[#609d60] font-semibold w-64 h-9 hover:bg-[#609d60] hover:text-green-100 group duration-300 ease-in-out"><i
+                            class="fa-solid fa-bag-shopping mx-3 group-hover:text-green-100 text-[#609d60] duration-300 ease-in-out"></i>Add
+                        To
+                        Cart</button>
+                </div>
+                <!-- Potato -->
+                <div class="my-4 mx-1 flex flex-col border-[1px] border-green-200 rounded-2xl p-5             
+ justify-evenly items-center relative">
+                    <img src="/images/patato.png" alt="" class="w-[270px]">
+                    <i class="fa-regular fa-heart text-xl absolute top-4 right-4 cursor-pointer"
+                        style="color: #949494;"></i>
+                    <h1 class="text-2xl font-nun font-bold text-[#0c0c0c] self-start mt-2">Potato</h1>
+                    <p class="text-sm font-nun font-semibold text-[#8e8e8e] self-start">1 KG</p>
+                    <h1 class="text-2xl font-semibold font-nun text-[#0c0c0c] self-start mt-3">100$
+                    </h1>
+                    <button
+                        class="my-5 bg-green-100 text-[#609d60] font-semibold w-64 h-9 hover:bg-[#609d60] hover:text-green-100 group duration-300 ease-in-out"><i
+                            class="fa-solid fa-bag-shopping mx-3 group-hover:text-green-100 text-[#609d60] duration-300 ease-in-out"></i>Add
+                        To
+                        Cart</button>
+                </div>
+                <!-- Gralic -->
+                <div class="my-4 mx-1 flex flex-col border-[1px] border-green-200 rounded-2xl p-5             
+ justify-evenly items-center relative">
+                    <img src="/images/garlic.png" alt="" class="w-[270px]">
+                    <i class="fa-regular fa-heart text-xl absolute top-4 right-4 cursor-pointer"
+                        style="color: #949494;"></i>
+                    <h1 class="text-2xl font-nun font-bold text-[#0c0c0c] self-start mt-2">Garlic</h1>
+                    <p class="text-sm font-nun font-semibold text-[#8e8e8e] self-start">1 KG</p>
+                    <h1 class="text-2xl font-semibold font-nun text-[#0c0c0c] self-start mt-3">3$
+                    </h1>
+                    <button
+                        class="my-5 bg-green-100 text-[#609d60] font-semibold w-64 h-9 hover:bg-[#609d60] hover:text-green-100 group duration-300 ease-in-out"><i
+                            class="fa-solid fa-bag-shopping mx-3 group-hover:text-green-100 text-[#609d60] duration-300 ease-in-out"></i>Add
+                        To
+                        Cart</button>
+                </div>
+                <!-- Tomato -->
+                <div class="my-4 mx-1 flex flex-col border-[1px] border-green-200 rounded-2xl p-5             
+ justify-evenly items-center relative">
+                    <img src="/images/tamato.png" alt="" class="w-[210px]">
+                    <i class="fa-regular fa-heart text-xl absolute top-4 right-4 cursor-pointer"
+                        style="color: #949494;"></i>
+                    <h1 class="text-2xl font-nun font-bold text-[#0c0c0c] self-start mt-2">Tomato</h1>
+                    <p class="text-sm font-nun font-semibold text-[#8e8e8e] self-start">1 KG</p>
+                    <h1 class="text-2xl font-semibold font-nun text-[#0c0c0c] self-start mt-3">1.4$
+                    </h1>
+                    <button
+                        class="my-5 bg-green-100 text-[#609d60] font-semibold w-64 h-9 hover:bg-[#609d60] hover:text-green-100 group duration-300 ease-in-out"><i
+                            class="fa-solid fa-bag-shopping mx-3 group-hover:text-green-100 text-[#609d60] duration-300 ease-in-out"></i>Add
+                        To
+                        Cart</button>
+                </div>
+            </div>
+        </section>
+    </article>
+    <!-- THE BUNDLES -->
+    <article class="my-10 mx-5 scroll-mt-10" id="package">
+        <section class="max-w-xs sm:max-w-xl  md:max-w-2xl  mg:max-w-4xl lg:max-w-5xl mx-auto">
+            <div class="py-14  text-left  px-10 bg-[#e2e7da] rounded-2xl">
+                <h1
+                    class="text-[18px] sm:text-2xl md:text-3xl font-nun font-bold text-[#0c0c0c] mb-4 sm:my-5 sm:mb-[60px]">
+                    Popular
+                    Bundle Pack
+                </h1>
+                <div class="flex flex-wrap justify-center md:justify-evenly">
+                    <div
+                        class=" bg-white my-4 mx-1 flex flex-col border-[1px] border-green-200 rounded-2xl p-5 w-64 smm:w-72 justify-between items-center relative">
+                        <img src="/images/pack1.png" alt="" class="w-[210px]">
+                        <i class="fa-regular fa-heart text-xl absolute top-4 right-4 cursor-pointer"
+                            style="color: #949494;"></i>
+                        <h1 class="text-2xl font-nun font-bold text-[#0c0c0c] self-start mt-2">Big Pack</h1>
+                        <p class="text-sm font-nun font-semibold text-[#8e8e8e] self-start">Lemone, Tomato,
+                            Potato,+4
+                        </p>
+                        <h1 class="text-2xl font-semibold font-nun text-[#0c0c0c] self-start mt-3">9$
+                        </h1>
+                        <button
+                            class="my-5 bg-green-100 text-[#609d60] font-semibold w-48 smm:w-52 sm:w-56 md:w-64  h-9 hover:bg-[#609d60] hover:text-green-100 group duration-300 ease-in-out"><i
+                                class="fa-solid fa-bag-shopping mx-3 group-hover:text-green-100 text-[#609d60] duration-300 ease-in-out"></i>Add
+                            To
+                            Cart</button>
+                    </div>
+                    <div
+                        class=" bg-white my-4 mx-1 flex flex-col border-[1px] border-green-200 rounded-2xl p-5 w-64 smm:w-72 justify-evenly items-center relative">
+                        <img src="/images/pack2.jpg" alt="" class="w-[210px]">
+                        <i class="fa-regular fa-heart text-xl absolute top-4 right-4 cursor-pointer"
+                            style="color: #949494;"></i>
+                        <h1 class="text-2xl font-nun font-bold text-[#0c0c0c] self-start mt-2">Large Pack</h1>
+                        <p class="text-sm font-nun font-semibold text-[#8e8e8e] self-start">Lemone, Tomato,
+                            Potato,+2
+                        </p>
+                        <h1 class="text-2xl font-semibold font-nun text-[#0c0c0c] self-start mt-3">5$
+                        </h1>
+                        <button
+                            class="my-5 bg-green-100 text-[#609d60] font-semibold w-48 smm:w-52 sm:w-56 md:w-64  h-9 hover:bg-[#609d60] hover:text-green-100 group duration-300 ease-in-out"><i
+                                class="fa-solid fa-bag-shopping mx-3 group-hover:text-green-100 text-[#609d60] duration-300 ease-in-out"></i>Add
+                            To
+                            Cart</button>
+                    </div>
+                    <div
+                        class=" bg-white my-4 mx-1 flex flex-col border-[1px] border-green-200 rounded-2xl p-5 w-64 sm:w-72 justify-evenly items-center relative">
+                        <img src="/images/pack3.png" alt="" class="w-[210px]">
+                        <i class="fa-regular fa-heart text-xl absolute top-4 right-4 cursor-pointer"
+                            style="color: #949494;"></i>
+                        <h1 class="text-2xl font-nun font-bold text-[#0c0c0c] self-start mt-2">Small Pack</h1>
+                        <p class="text-sm font-nun font-semibold text-[#8e8e8e] self-start">Lemone, Tomato,
+                            Potato
+                        </p>
+                        <h1 class="text-2xl font-semibold font-nun text-[#0c0c0c] self-start mt-3">3$
+                        </h1>
+                        <button
+                            class="my-5 bg-green-100 text-[#609d60] font-semibold  w-48 smm:w-52 sm:w-56 md:w-64  h-9 hover:bg-[#609d60] hover:text-green-100 group duration-300 ease-in-out"><i
+                                class="fa-solid fa-bag-shopping mx-3 group-hover:text-green-100 text-[#609d60] duration-300 ease-in-out"></i>Add
+                            To
+                            Cart</button>
+                    </div>
+                    <div
+                        class=" bg-white my-4 mx-1 flex flex-col border-[1px] border-green-200 rounded-2xl p-5 w-64 sm:w-72 justify-evenly items-center relative">
+                        <img src="/images/pack1.png" alt="" class="w-[210px]">
+                        <i class="fa-regular fa-heart text-xl absolute top-4 right-4 cursor-pointer"
+                            style="color: #949494;"></i>
+                        <h1 class="text-2xl font-nun font-bold text-[#0c0c0c] self-start mt-2">Big Pack</h1>
+                        <p class="text-sm font-nun font-semibold text-[#8e8e8e] self-start">Lemone, Tomato,
+                            Potato,+4
+                        </p>
+                        <h1 class="text-2xl font-semibold font-nun text-[#0c0c0c] self-start mt-3">9$
+                        </h1>
+                        <button
+                            class="my-5 bg-green-100 text-[#609d60] font-semibold  w-48 smm:w-52 sm:w-56 md:w-64  h-9 hover:bg-[#609d60] hover:text-green-100 group duration-300 ease-in-out"><i
+                                class="fa-solid fa-bag-shopping mx-3 group-hover:text-green-100 text-[#609d60] duration-300 ease-in-out"></i>Add
+                            To
+                            Cart</button>
+                    </div>
+                    <div
+                        class=" bg-white my-4 mx-1 flex flex-col border-[1px] border-green-200 rounded-2xl p-5 w-64 sm:w-72 justify-evenly items-center relative">
+                        <img src="/images/pack2.jpg" alt="" class="w-[210px]">
+                        <i class="fa-regular fa-heart text-xl absolute top-4 right-4 cursor-pointer"
+                            style="color: #949494;"></i>
+                        <h1 class="text-2xl font-nun font-bold text-[#0c0c0c] self-start mt-2">Large Pack</h1>
+                        <p class="text-sm font-nun font-semibold text-[#8e8e8e] self-start">Lemone, Tomato,
+                            Potato,+2
+                        </p>
+                        <h1 class="text-2xl font-semibold font-nun text-[#0c0c0c] self-start mt-3">5$
+                        </h1>
+                        <button
+                            class="my-5 bg-green-100 text-[#609d60] font-semibold  w-48 smm:w-52 sm:w-56 md:w-64  h-9 hover:bg-[#609d60] hover:text-green-100 group duration-300 ease-in-out"><i
+                                class="fa-solid fa-bag-shopping mx-3 group-hover:text-green-100 text-[#609d60] duration-300 ease-in-out"></i>Add
+                            To
+                            Cart</button>
+                    </div>
+                    <div
+                        class=" bg-white my-4 mx-1 flex flex-col border-[1px] border-green-200 rounded-2xl p-5 w-64 sm:w-72 justify-evenly items-center relative">
+                        <img src="/images/pack3.png" alt="" class="w-[210px]">
+                        <i class="fa-regular fa-heart text-xl absolute top-4 right-4 cursor-pointer"
+                            style="color: #949494;"></i>
+                        <h1 class="text-2xl font-nun font-bold text-[#0c0c0c] self-start mt-2">Small Pack</h1>
+                        <p class="text-sm font-nun font-semibold text-[#8e8e8e] self-start">Lemone, Tomato,
+                            Potato
+                        </p>
+                        <h1 class="text-2xl font-semibold font-nun text-[#0c0c0c] self-start mt-3">3$
+                        </h1>
+                        <button
+                            class="my-5 bg-green-100 text-[#609d60] font-semibold  w-48 smm:w-52 sm:w-56 md:w-64  h-9 hover:bg-[#609d60] hover:text-green-100 group duration-300 ease-in-out"><i
+                                class="fa-solid fa-bag-shopping mx-3 group-hover:text-green-100 text-[#609d60] duration-300 ease-in-out"></i>Add
+                            To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+    <!-- THE CLIENTS -->
+    <article class="my-5  bg-[rgb(250,250,250)]">
+        <h1 class="text-xl sm:text-3xl text-black text-center py-10 font-nun font-semibold">What's Our Clients Say
+        </h1>
+        <div class="py-10">
+
+            <div class="flex flex-row flex-wrap justify-center gap-[10px]">
+                <div
+                    class="bg-white py-5 p-2 rounded-bl-2xl shadow-md rounded-tr-2xl w-72 sm:w-80 md:w-96 mg:w-[400px] flex flex-col">
+                    <div class="flex gap-2 items-center">
+                        <img src="/images/client-1.jpg" alt="" class=" w-10 h-10 rounded-[100%] ">
+                        <div>
+                            <h1 class="text-xs text-black font-nun font-bold ">James Mcavoy</h1>
+                            <p class="text-[#d3d3d3] text-xs font-nun font-[700]">CEO</p>
+                        </div>
+                    </div>
+                    <img src="/images/pngwing.com.png" alt="" class="w-28">
+                    <p class="text-xs text-gray-700  font-nun font-light">Lorem, ipsum dolor sit amet
+                        consectetur
+                        adipisicing elit. Sed dicta sapiente iste
+                        consequuntur soluta odio culpa, praesentium voluptatem velit, explicabo commodi earum, eaque
+                        laborum. Accusamus voluptas ipsum libero dolor natus!</p>
+                </div>
+                <div
+                    class="bg-white p-5 rounded-bl-2xl shadow-md rounded-tr-2xl w-72 sm:w-80 md:w-96 mg:w-[400px] flex flex-col">
+                    <div class="flex gap-2 items-center">
+                        <img src="/images/client-2.jpg" alt="" class=" w-10 h-10 rounded-[100%] ">
+                        <div>
+                            <h1 class="text-xs text-black font-nun font-bold ">Adward Mcavoy</h1>
+                            <p class="text-[#d3d3d3] text-xs font-nun font-[700]">Software Develop</p>
+                        </div>
+                    </div>
+                    <img src="/images/pngwing.com.png" alt="" class="w-32">
+                    <p class="text-xs text-gray-700  font-nun font-light">Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Sed dicta sapiente iste
+                        consequuntur soluta odio culpa, praesentium voluptatem velit, explicabo commodi earum, eaque
+                        laborum. Accusamus voluptas ipsum libero dolor natus!</p>
+                </div>
+                <div
+                    class="bg-white p-5 rounded-bl-2xl shadow-md rounded-tr-2xl w-72 sm:w-80 md:w-96 mg:w-[400px] flex flex-col">
+                    <div class="flex gap-2 items-center">
+                        <img src="/images/client-3.jpg" alt="" class=" w-10 h-10 rounded-[100%] ">
+                        <div>
+                            <h1 class="text-xs text-black font-nun font-bold ">Ava Alex</h1>
+                            <p class="text-[#d3d3d3] text-xs font-nun font-[700]">Marketer</p>
+                        </div>
+                    </div>
+                    <img src="/images/pngwing.com.png" alt="" class="w-32">
+                    <p class="text-xs text-gray-700  font-nun font-light">Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Sed dicta sapiente iste
+                        consequuntur soluta odio culpa, praesentium voluptatem velit, explicabo commodi earum, eaque
+                        laborum. Accusamus voluptas ipsum libero dolor natus!</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- Partners -->
+    <article class="my-[100px] mx-5">
+        <div class="max-w-xs sm:max-w-xl  md:max-w-2xl  mg:max-w-4xl lg:max-w-5xl mx-auto">
+            <h2 class="text-2xl font-nun font-semibold text-left pl-[10px]">Our Trusted Partner</h2>
+            <ul class="flex flex-row flex-wrap justify-between items-center my-4 gap-[10px]">
+                <li class=""><img src="/images/logo-1.png" alt=""
+                        class="opacity-20 hover:opacity-[1] duration-500 ease-in-out"></li>
+                <li class=""><img src="/images/logo-2.png" alt=""
+                        class="opacity-20 w-52 hover:opacity-[1] duration-500 ease-in-out"></li>
+                <li class=""><img src="/images/logo-3.png" alt=""
+                        class="opacity-20 w-32 hover:opacity-[1] duration-500 ease-in-out"></li>
+                <li class=""><img src="/images/logo-4.png" alt=""
+                        class="opacity-20 w-32 hover:opacity-[1] duration-500 ease-in-out"></li>
+            </ul>
+        </div>
+    </article>
+    <!-- APP -->
+    <article class="my-[200px] mx-5 scroll-mt-24" id="app">
+        <div
+            class="max-w-xs sm:max-w-xl  md:max-w-2xl  mg:max-w-4xl lg:max-w-5xl mx-auto flex flex-col items-center justify-center gap-4 md:block">
+            <img src="/images/mobile-app.png" alt=""
+                class="block md:hidden w-48 rounded-lg border-[3px] border-gray-800">
+            <div class="p-10 flex flex-row flex-wrap items-center bg-emerald-100 rounded-xl">
+                <div class="hidden w-[50%] md:flex justify-center items-center relative">
+                    <img src="/images/mobile-app.png" alt=""
+                        class="w-48 absolute rounded-lg border-[3px] border-gray-800">
+                </div>
+                <div
+                    class="w-full md:w-[50%] md:block md:text-left text-center flex flex-col justify-around items-center">
+                    <h1 class="text-2xl font-ui pb-4 font-bold text-[#1e1e1e]">Download App</h1>
+                    <p class="text-sm text-gray-600 font-ui font-semibold">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Sed corrupti facilis iusto
+                        debitis eaque et asperiores esse quae mollitia, veritatis consectetur nam, adipisci labore ab.
+                        Necessitatibus quas nesciunt dignissimos placeat.</p>
+                    <div class="w-full  flex flex-wrap gap-2 items-center justify-center md:justify-start my-4">
+                        <a href=""><img src="/images/appstore-btn.png" alt="" class="w-[115px] rounded-md"></a>
+                        <a href=""><img src="/images/googleplay-btn.png" alt="" class="w-32 rounded-md"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="relative bg-[#1b1b1b]">
+        <hr class="w-full h-2 bg-green-700 absolute top-0 left-0">
+        <div
+            class="max-w-xs sm:max-w-xl  md:max-w-2xl  mg:max-w-4xl lg:max-w-5xl py-10 mx-auto grid grid-cols-[repeat(auto-fill,200px)] mg:flex mg:flex-row mg:flex-wrap md:justify-between justify-center  mg:items-start gap-2">
+            <div class="grid justify-center items-center gap-1">
+                <h1 class="text-xl font-nun font-semibold text-white text-center"><span
+                        class="text-green-600">e</span>Grocery
+                </h1>
+                <ul class="flex flex-row flex-wrap justify-around ">
+                    <li
+                        class="border border-[#d2d2d2a7] rounded-sm m-1 borde-[1px] w-8 h-8 flex justify-center items-center hover:bg-green-500 duration-500 ease-in-out">
+                        <i class="fa-brands fa-facebook-f text-sm text-white"></i>
+                    </li>
+                    <li
+                        class="border border-[#d2d2d2a7] rounded-sm m-1 borde-[1px] w-8 h-8 flex justify-center items-center hover:bg-green-500 duration-500 ease-in-out">
+                        <i class="fa-brands fa-twitter text-sm text-white"></i>
+                    </li>
+                    <li
+                        class="border border-[#d2d2d2a7] rounded-sm m-1 borde-[1px] w-8 h-8 flex justify-center items-center hover:bg-green-500 duration-500 ease-in-out">
+                        <i class="fa-brands fa-instagram text-sm text-white"></i>
+                    </li>
+                    <li
+                        class="border border-[#d2d2d2a7] rounded-sm m-1 borde-[1px] w-8 h-8 flex justify-center items-center hover:bg-green-500 duration-500 ease-in-out">
+                        <i class="fa-brands fa-youtube text-sm text-white"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid justify-center items-center gap-1">
+                <h1 class="text-xl font-nun font-semibold text-white py-2">Product</h1>
+                <ul class="flex flex-col justify-center items-center mg:items-start">
+                    <li>
+                        <a href="">
+                            <h1
+                                class="text-sm text-[#b5b5b590] font-nun font-semibold hover:text-white duration-300 ease-out">
+                                Clothes</h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h1
+                                class="text-sm text-[#b5b5b590] font-nun font-semibold hover:text-white duration-300 ease-out">
+                                Packages</h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h1
+                                class="text-sm text-[#b5b5b590] font-nun font-semibold hover:text-white duration-300 ease-out">
+                                Popular</h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h1
+                                class="text-sm text-[#b5b5b590] font-nun font-semibold hover:text-white duration-300 ease-out">
+                                New</h1>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid justify-center items-center gap-1">
+                <h1 class="text-xl font-nun font-semibold text-white py-2">Category</h1>
+                <ul class="flex flex-col justify-center items-center mg:items-start">
+                    <li>
+                        <a href="">
+                            <h1
+                                class="text-sm text-[#b5b5b590] font-nun font-semibold hover:text-white duration-300 ease-out">
+                                Beauty</h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h1
+                                class="text-sm text-[#b5b5b590] font-nun font-semibold hover:text-white duration-300 ease-out">
+                                Meats</h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h1
+                                class="text-sm text-[#b5b5b590] font-nun font-semibold hover:text-white duration-300 ease-out">
+                                Kids</h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h1
+                                class="text-sm text-[#b5b5b590] font-nun font-semibold hover:text-white duration-300 ease-out">
+                                Baby</h1>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid justify-center items-center gap-1">
+                <h1 class="text-xl font-nun font-semibold text-white text-center mg:text-left ">Contact</h1>
+                <ul class="">
+                    <li>
+                        <a href="">
+                            <h1
+                                class="text-sm text-[#b5b5b590] font-nun font-semibold text-center md:text-left hover:text-white duration-300 ease-out">
+                                Phone: +123456789</h1>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <h1
+                                class="text-sm text-[#b5b5b590] font-nun font-semibold text-center md:text-left hover:text-white duration-300 ease-out">
+                                Email: example@gmail.com</h1>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
